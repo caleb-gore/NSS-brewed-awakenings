@@ -34,7 +34,11 @@ document.addEventListener("click", (clickEvent) => {
             const itemsSold = orders.filter(order => order.employeeId === employee.id)
 
             if (employee.id === parseInt(employeeId)) {
-                window.alert(`${employee.name} sold ${itemsSold.length} products`)
+                if (itemsSold.length === 1) {
+                    window.alert(`${employee.name} sold ${itemsSold.length} product`)
+                } else {
+                    window.alert(`${employee.name} sold ${itemsSold.length} products`)
+                }
             }
         }
     }
